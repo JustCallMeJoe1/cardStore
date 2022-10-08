@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import { useEffect, useState } from "react"
 
 function App() {
+
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    const fetchAPI = async() => {
+
+      //Call API (wait), convert (depends on wait), then set the state
+      let res = await fetch("/api");
+      let data = await res.json();
+      setData(data);
+    }
+
+    fetchAPI().catch(error => {
+      console.log("Error occurred!")
+    })
+
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit a<code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {
+        (typeof data.users !== "undefined") ? (
+          data.users.map((user, i) => (
+            <p key={i}>{user}</p>
+          )) 
+        ) : (
+          <div>Loading users...</div>
+        )
+      }
     </div>
   );
 }
