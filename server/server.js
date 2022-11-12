@@ -37,25 +37,25 @@ app.use(morgan("tiny"));                       //Logger for client requests
 //==============Set up initial Routing to different webpages throughout the web server============================
 
 //General Site Navigation
-app.use("/", mainRoutes)
+//app.use("/", mainRoutes)
 
 //Card Related Navigation (Pokmon)
-app.use("/pokemon", pokemonRoutes)
+//app.use("/pokemon", pokemonRoutes)
 
 //Card Related Navigation (Yugioh)
-app.use("/yugioh", yugiohRoutes)
+//app.use("/yugioh", yugiohRoutes)
 
 //Card Related Navigation (Magic the gathering)
-app.use("/magic", magicRoutes)
+//app.use("/magic", magicRoutes)
 
 //Card Related Navigation (Digimon)
-app.use("/digimon", digimonRoutes)
+//app.use("/digimon", digimonRoutes)
 
 //Card Related Navigation (Final Fantasy)
-app.use("/finalFantasy", finalFantasyRoutes)
+//app.use("/finalFantasy", finalFantasyRoutes)
 
 //User related navigation
-app.use("/users", userRoutes)
+//app.use("/users", userRoutes)
 
 //Example server function
 app.get("/api", (req, res) => {
