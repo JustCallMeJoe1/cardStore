@@ -1,7 +1,7 @@
 import React from "react"
 import { useEffect, useState } from "react"
 
-function App() {
+function HomePage() {
 
   const [data, setData] = useState({});
 
@@ -35,4 +35,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;
