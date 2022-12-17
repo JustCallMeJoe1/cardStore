@@ -28,6 +28,7 @@ function Header() {
                     </Col>
 
                     <Col xs={1}>
+                        {/* @TODO: CHANGE TO SPLIT BUTTON DROPDOWN https://react-bootstrap.github.io/components/dropdowns/#split-button-dropdowns */}
                         <Dropdown>
                             <Dropdown.Toggle variant="light" id="dropdown-basic">
                                 <img src="/images/defaultUser.png" alt="Default User" width="45" height="45" id="twLogo" />
