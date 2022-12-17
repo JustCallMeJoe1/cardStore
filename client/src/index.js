@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import "./Static/css/App.css";
 import HomePage from './Components/HomePage';
 import Header from "./Components/Header";
 import reportWebVitals from './reactTesting/reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

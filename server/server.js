@@ -58,9 +58,9 @@ app.use(morgan("tiny"));                       //Logger for client requests
 //app.use("/users", userRoutes)
 
 //Example server function
-app.get("/api", (req, res) => {
-    res.json({"users": ["user1", "user2", "user3", "hi"]})
-})
+//app.get("/api", (req, res) => {
+//    res.json({"users": ["user1", "user2", "user3", "hi"]})
+//})
 
 app.listen(port, host, () => {
     console.log(`Server started on ${host} with port ${port}.`);
